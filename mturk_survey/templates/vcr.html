@@ -1,0 +1,1380 @@
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+<section class="container" id="survey-root">
+    <div class="row">
+        <div class="col-xl-12">
+            <h2 class="mt-2">
+                Instructions
+            </h2>
+
+            <!--Instructions card-->
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        Overview
+                        <button type="button" class="btn btn-primary btn-sm collapser" data-bs-toggle="collapse"
+                                data-bs-target="#survey-overview" aria-expanded="false"
+                                aria-controls="survey-overview">
+                            Collapse
+                        </button>
+                    </h4>
+
+                    <div class="collapse show" id="survey-overview">
+                        <div class="card-text">
+                            <p>
+                                Thank you for participating in this HIT and contributing to our research on
+                                interpretable
+                                Artificial Intelligence! &#129303<br/>
+                                The goal of this task is to assess the quality of explanations.
+                            </p>
+                            <p>
+                                <b>An explanation justifies an answer to a question.</b>
+                                This HIT contains 5 image-question pairs. For each pair, you need to evaluate the
+                                quality
+                                of two given sentences that explain the relationship between the image, question and
+                                answer.
+                            </p>
+
+                            <h4 class="mt-5">Task Description</h4>
+                            <ol>
+                                <li>First, you will be shown an <b>Image</b> and a <b>Question</b> about the image.
+                                    You will also be shown a list of 4 possible <b>Answers</b> to the question.
+                                </li>
+                                <li>You will then be asked to select which of the possibilities best answers the
+                                    question.
+                                    Only one answer is correct, and we know the correct answers. This is solely a
+                                    check to
+                                    make sure you understood the image-question pair correctly.
+                                </li>
+                                <li>
+                                    You will then be shown two explanations that each try to justify this answer.
+                                    <b>The explanations are independent of each other and their order is
+                                        meaningless.</b>
+                                </li>
+                                <li>
+                                    For each of the explanations, we ask <b>two evaluation questions</b>:
+                                    <ul>
+                                        <li>Given the <u>image and the question</u>, does the explanation justify the
+                                            answer?
+                                        </li>
+                                        <li>If any, what are the shortcomings of the explanation?</li>
+                                    </ul>
+                                </li>
+                            </ol>
+
+                            <h5 class="mt-4">Tips</h5>
+                            <ul>
+                                <li>Minor grammatical and style errors should be ignored (e.g. case sensitivity, missing
+                                    periods, a missing pronoun etc.).
+                                </li>
+                                <li>An explanation that just repeats or restates the question is NOT a valid
+                                    explanation.
+                                </li>
+                                <li>A good approach to evaluating explanations is the following: Before looking at the
+                                    explanations, think of an explanation yourself and then anchor your assessments
+                                    based on
+                                    that.
+                                </li>
+                            </ul>
+                            <p>
+                                Quality checks and known answers are placed throughout the questionnaire.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example card -->
+            <div class="card my-3">
+                <div class="card-body task">
+                    <h4 class="card-title">
+                        Example
+                        <button type="button" class="btn btn-primary btn-sm collapser" data-bs-toggle="collapse"
+                                data-bs-target="#survey-example" aria-expanded="false"
+                                aria-controls="survey-example">
+                            Collapse
+                        </button>
+                    </h4>
+
+                    <div class="collapse show" id="survey-example">
+                        <p>The content below the line within this box is an example of how we expect you to solve the
+                            individual
+                            tasks.</p>
+                        <hr>
+
+                        <h6 class="card-title task-divider">Image</h6>
+                        <div class="card-text">
+                            <img class="task-image"
+                                 src="https://d32dig5cug34uf.cloudfront.net/survey_images_vcr/example.jpg"
+                                 alt="Example image">
+                        </div>
+
+                        <h6 class="card-title task-divider">Question</h6>
+                        <div class="card-text">
+                            Are person1 and person2 working together?
+                        </div>
+
+                        <h4 class="card-title task-divider">Questions</h4>
+
+                        <p class="card-title task-divider">
+                            What is the correct answer to the question? <strong>Pick one.</strong>
+                        </p>
+                        <div class="card-text">
+                            <div class="btn-container">
+                                <input type="radio" class="btn-check" id="exampleRelationshipRadio1" autocomplete="off"
+                                       disabled>
+                                <label class="btn btn-outline-primary"
+                                       for="exampleRelationshipRadio1">Yes, they are doctors.</label>
+                            </div>
+                            <div class="btn-container">
+                                <input type="radio" class="btn-check" id="exampleRelationshipRadio2" autocomplete="off"
+                                       checked disabled>
+                                <label class="btn btn-outline-primary" for="exampleRelationshipRadio2">Yes person1 and
+                                    person2 are working together.</label>
+                            </div>
+                            <div class="btn-container">
+                                <input type="radio" class="btn-check" id="exampleRelationshipRadio3" autocomplete="off"
+                                       disabled>
+                                <label class="btn btn-outline-primary"
+                                       for="exampleRelationshipRadio3">person1 and person2 appear to be lounging and not
+                                    working at all.</label>
+                            </div>
+                            <div class="btn-container">
+                                <input type="radio" class="btn-check" id="exampleRelationshipRadio4" autocomplete="off"
+                                       disabled>
+                                <label class="btn btn-outline-primary" for="exampleRelationshipRadio4">No, they are
+                                    doing their own individual tasks.</label>
+                            </div>
+                        </div>
+
+                        <!-- EXPLANATION #1 -->
+                        <div>
+                            <h5 class="card-title task-divider">
+                                Explanation #1: person1 and person2 are both wearing suits and ties, and are standing
+                                next to each other.
+                            </h5>
+                            <div class="card-text">
+                                <p>
+                                    Given the image and the question, does the explanation justify the answer above?
+                                    <strong>Pick one.</strong>
+                                </p>
+                                <input type="radio" class="btn-check" id="example1JustificationRadio1"
+                                       autocomplete="off"
+                                       checked disabled>
+                                <label class="btn btn-outline-success" for="example1JustificationRadio1">Yes</label>
+                                <input type="radio" class="btn-check" id="example1JustificationRadio2"
+                                       autocomplete="off"
+                                       disabled>
+                                <label class="btn btn-outline-primary" for="example1JustificationRadio2">Weak
+                                    Yes</label>
+                                <input type="radio" class="btn-check" id="example1JustificationRadio3"
+                                       autocomplete="off"
+                                       disabled>
+                                <label class="btn btn-outline-warning" for="example1JustificationRadio3">Weak No</label>
+                                <input type="radio" class="btn-check" id="example1JustificationRadio4"
+                                       autocomplete="off"
+                                       disabled>
+                                <label class="btn btn-outline-danger" for="example1JustificationRadio4">No</label>
+                            </div>
+                            <div class="card-text task-divider">
+                                <p>
+                                    What are the shortcomings of Explanation #1?
+                                    <strong>Select all that apply.</strong>
+                                </p>
+                                <input type="checkbox" class="btn-check" id="example1ErrorsCheck1" autocomplete="off"
+                                       disabled>
+                                <label class="btn btn-outline-danger" for="example1ErrorsCheck1">
+                                    Incorrect description of the image
+                                </label>
+                                <input type="checkbox" class="btn-check" id="example1ErrorsCheck2" autocomplete="off"
+                                       disabled>
+                                <label class="btn btn-outline-danger" for="example1ErrorsCheck2">
+                                    Insufficient justification
+                                </label>
+                                <input type="checkbox" class="btn-check" id="example1ErrorsCheck3" autocomplete="off"
+                                       disabled>
+                                <label class="btn btn-outline-danger" for="example1ErrorsCheck3">
+                                    Confusing sentence
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- EXPLANATION #2 -->
+                        <div>
+                            <h5 class="card-title task-divider">
+                                Explanation #2: Standing men are working together.
+                            </h5>
+                            <div class="card-text">
+                                <p>
+                                    Given the image and the question, does the explanation justify the answer above?
+                                    <strong>Pick one.</strong>
+                                </p>
+                                <input type="radio" class="btn-check" id="example2JustificationRadio1"
+                                       autocomplete="off"
+                                       disabled>
+                                <label class="btn btn-outline-success" for="example2JustificationRadio1">Yes</label>
+                                <input type="radio" class="btn-check" id="example2JustificationRadio2"
+                                       autocomplete="off"
+                                       disabled>
+                                <label class="btn btn-outline-primary" for="example2JustificationRadio2">Weak
+                                    Yes</label>
+                                <input type="radio" class="btn-check" id="example2JustificationRadio3"
+                                       autocomplete="off"
+                                       disabled>
+                                <label class="btn btn-outline-warning" for="example2JustificationRadio3">Weak No</label>
+                                <input type="radio" class="btn-check" id="example2JustificationRadio4"
+                                       autocomplete="off"
+                                       checked disabled>
+                                <label class="btn btn-outline-danger" for="example2JustificationRadio4">No</label>
+                            </div>
+                            <div class="card-text task-divider">
+                                <p>
+                                    What are the shortcomings of Explanation #2?
+                                    <strong>Select all that apply.</strong>
+                                </p>
+                                <input type="checkbox" class="btn-check" id="example2ErrorsCheck1" autocomplete="off"
+                                       disabled>
+                                <label class="btn btn-outline-danger" for="example2ErrorsCheck1">
+                                    Incorrect description of the image
+                                </label>
+                                <input type="checkbox" class="btn-check" id="example2ErrorsCheck2" autocomplete="off"
+                                       checked disabled>
+                                <label class="btn btn-outline-danger" for="example2ErrorsCheck2">
+                                    Insufficient justification
+                                </label>
+                                <input type="checkbox" class="btn-check" id="example2ErrorsCheck3" autocomplete="off"
+                                       checked disabled>
+                                <label class="btn btn-outline-danger" for="example2ErrorsCheck3">
+                                    Confusing sentence
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- EXPLANATION #3 -->
+                        <div>
+                            <h5 class="card-title task-divider">
+                                Explanation #3: They are standing really close together.
+                            </h5>
+                            <div class="card-text">
+                                <p>
+                                    Given the image and the question, does the explanation justify the answer above?
+                                    <strong>Pick one.</strong>
+                                </p>
+                                <input type="radio" class="btn-check" id="example3JustificationRadio1"
+                                       autocomplete="off"
+                                       disabled>
+                                <label class="btn btn-outline-success" for="example3JustificationRadio1">Yes</label>
+                                <input type="radio" class="btn-check" id="example3JustificationRadio2"
+                                       autocomplete="off"
+                                       disabled>
+                                <label class="btn btn-outline-primary" for="example3JustificationRadio2">Weak
+                                    Yes</label>
+                                <input type="radio" class="btn-check" id="example3JustificationRadio3"
+                                       autocomplete="off"
+                                       checked disabled>
+                                <label class="btn btn-outline-warning" for="example3JustificationRadio3">Weak No</label>
+                                <input type="radio" class="btn-check" id="example3JustificationRadio4"
+                                       autocomplete="off"
+                                       disabled>
+                                <label class="btn btn-outline-danger" for="example3JustificationRadio4">No</label>
+                            </div>
+                            <div class="card-text task-divider">
+                                <p>
+                                    What are the shortcomings of Explanation #3?
+                                    <strong>Select all that apply.</strong>
+                                </p>
+                                <input type="checkbox" class="btn-check" id="example3ErrorsCheck1" autocomplete="off"
+                                       disabled>
+                                <label class="btn btn-outline-danger" for="example3ErrorsCheck1">
+                                    Incorrect description of the image
+                                </label>
+                                <input type="checkbox" class="btn-check" id="example3ErrorsCheck2" autocomplete="off"
+                                       checked disabled>
+                                <label class="btn btn-outline-danger" for="example3ErrorsCheck2">
+                                    Insufficient justification
+                                </label>
+                                <input type="checkbox" class="btn-check" id="example3ErrorsCheck3" autocomplete="off"
+                                       disabled>
+                                <label class="btn btn-outline-danger" for="example3ErrorsCheck3">
+                                    Confusing sentence
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- EXPLANATION #4 -->
+                        <div>
+                            <h5 class="card-title task-divider">
+                                Explanation #4: Because person1 and person2 are working on a job.
+                            </h5>
+                            <div class="card-text">
+                                <p>
+                                    Given the image and the question, does the explanation justify the answer above?
+                                    <strong>Pick one.</strong>
+                                </p>
+                                <input type="radio" class="btn-check" id="example4JustificationRadio1"
+                                       autocomplete="off"
+                                       disabled>
+                                <label class="btn btn-outline-success" for="example4JustificationRadio1">Yes</label>
+                                <input type="radio" class="btn-check" id="example4JustificationRadio2"
+                                       autocomplete="off"
+                                       checked disabled>
+                                <label class="btn btn-outline-primary" for="example4JustificationRadio2">Weak
+                                    Yes</label>
+                                <input type="radio" class="btn-check" id="example4JustificationRadio3"
+                                       autocomplete="off"
+                                       disabled>
+                                <label class="btn btn-outline-warning" for="example4JustificationRadio3">Weak No</label>
+                                <input type="radio" class="btn-check" id="example4JustificationRadio4"
+                                       autocomplete="off"
+                                       disabled>
+                                <label class="btn btn-outline-danger" for="example4JustificationRadio4">No</label>
+                            </div>
+                            <div class="card-text task-divider">
+                                <p>
+                                    What are the shortcomings of Explanation #4?
+                                    <strong>Select all that apply.</strong>
+                                </p>
+                                <input type="checkbox" class="btn-check" id="example4ErrorsCheck1" autocomplete="off"
+                                       checked disabled>
+                                <label class="btn btn-outline-danger" for="example4ErrorsCheck1">
+                                    Incorrect description of the image
+                                </label>
+                                <input type="checkbox" class="btn-check" id="example4ErrorsCheck2" autocomplete="off"
+                                       disabled>
+                                <label class="btn btn-outline-danger" for="example4ErrorsCheck2">
+                                    Insufficient justification
+                                </label>
+                                <input type="checkbox" class="btn-check" id="example4ErrorsCheck3" autocomplete="off"
+                                       disabled>
+                                <label class="btn btn-outline-danger" for="example4ErrorsCheck3">
+                                    Confusing sentence
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <crowd-form>
+                <!-- Tasks from now on -->
+                <h2 class="mt-5">
+                    Tasks
+                </h2>
+
+                <!-- TASK 1 -->
+                <div class="card my-3">
+                    <div class="card-body task">
+                        <h4 class="card-title">
+                            Task 1
+                        </h4>
+                        <input type="hidden" name="task1_image_id" value="${id_0}"/>
+
+                        <h6 class="card-title task-divider">Image</h6>
+                        <div class="card-text">
+                            <img class="task-image"
+                                 src="https://d32dig5cug34uf.cloudfront.net/survey_images_vcr/${img_name_0}"
+                                 alt="Example image">
+                        </div>
+
+                        <h6 class="card-title task-divider">Question</h6>
+                        <div class="card-text">
+                            <b><u>${processed_question_0}?</u></b>
+                        </div>
+
+                        <h4 class="card-title task-divider">Questions</h4>
+
+                        <p class="card-title task-divider">
+                            What is the correct answer to the question? <strong>Pick one.</strong>
+                        </p>
+                        <div class="card-text">
+                            <div class="btn-container">
+                                <input type="radio" class="btn-check" name="task1_answer" value="answer0"
+                                       id="task1AnswerRadio1" autocomplete="off">
+                                <label class="btn btn-outline-primary"
+                                       for="task1AnswerRadio1">${answer0_0}</label>
+                            </div>
+                            <div class="btn-container">
+                                <input type="radio" class="btn-check" name="task1_answer" value="answer1"
+                                       id="task1AnswerRadio2" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="task1AnswerRadio2">${answer1_0}</label>
+                            </div>
+                            <div class="btn-container">
+                                <input type="radio" class="btn-check" name="task1_answer" value="answer2"
+                                       id="task1AnswerRadio3" autocomplete="off">
+                                <label class="btn btn-outline-primary"
+                                       for="task1AnswerRadio3">${answer2_0}</label>
+                            </div>
+                            <div class="btn-container">
+                                <input type="radio" class="btn-check" name="task1_answer" value="answer3"
+                                       id="task1AnswerRadio4" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="task1AnswerRadio4">${answer3_0}</label>
+                            </div>
+                        </div>
+
+                        <!-- Explanation 1 -->
+                        <div>
+                            <h5 class="card-title task-divider">
+                                Explanation #1: <u>${output_explanation_0}</u>
+                            </h5>
+                            <div class="card-text">
+                                <p>
+                                    Given the image and the question, does the explanation justify the answer above?
+                                    <strong>Pick one.</strong>
+                                </p>
+                                <input type="radio" class="btn-check" id="task1explanation1JustificationRadio1"
+                                       autocomplete="off"
+                                       name="task1_explanation1_explanation_justifies_answer" value="yes">
+                                <label class="btn btn-outline-success"
+                                       for="task1explanation1JustificationRadio1">Yes</label>
+                                <input type="radio" class="btn-check" id="task1explanation1JustificationRadio2"
+                                       autocomplete="off"
+                                       name="task1_explanation1_explanation_justifies_answer" value="weak_yes">
+                                <label class="btn btn-outline-primary" for="task1explanation1JustificationRadio2">Weak
+                                    Yes</label>
+                                <input type="radio" class="btn-check" id="task1explanation1JustificationRadio3"
+                                       autocomplete="off"
+                                       name="task1_explanation1_explanation_justifies_answer" value="weak_no">
+                                <label class="btn btn-outline-warning" for="task1explanation1JustificationRadio3">Weak
+                                    No</label>
+                                <input type="radio" class="btn-check" id="task1explanation1JustificationRadio4"
+                                       autocomplete="off"
+                                       name="task1_explanation1_explanation_justifies_answer" value="no">
+                                <label class="btn btn-outline-danger"
+                                       for="task1explanation1JustificationRadio4">No</label>
+                            </div>
+                            <div class="card-text task-divider">
+                                <p>
+                                    What are the shortcomings of Explanation #1?
+                                    <strong>Select all that apply.</strong>
+                                </p>
+                                <input type="checkbox" class="btn-check" id="task1explanation1ErrorsCheck1"
+                                       autocomplete="off"
+                                       name="task1_explanation1_shortcomings_incorrect_description" value="selected">
+                                <label class="btn btn-outline-danger" for="task1explanation1ErrorsCheck1">
+                                    Incorrect description of the image
+                                </label>
+                                <input type="checkbox" class="btn-check" id="task1explanation1ErrorsCheck2"
+                                       autocomplete="off"
+                                       name="task1_explanation1_shortcomings_insufficient_justification"
+                                       value="selected">
+                                <label class="btn btn-outline-danger" for="task1explanation1ErrorsCheck2">
+                                    Insufficient justification
+                                </label>
+                                <input type="checkbox" class="btn-check" id="task1explanation1ErrorsCheck3"
+                                       autocomplete="off"
+                                       name="task1_explanation1_shortcomings_confusing_sentence" value="selected">
+                                <label class="btn btn-outline-danger" for="task1explanation1ErrorsCheck3">
+                                    Confusing sentence
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Explanation 2 -->
+                        <div>
+                            <h5 class="card-title task-divider">
+                                Explanation #2: <u>${explanation_0}</u>
+                            </h5>
+                            <div class="card-text">
+                                <p>
+                                    Given the image and the question, does the explanation justify the answer above?
+                                    <strong>Pick one.</strong>
+                                </p>
+                                <input type="radio" class="btn-check" id="task1explanation2JustificationRadio1"
+                                       autocomplete="off"
+                                       name="task1_explanation2_explanation_justifies_answer" value="yes">
+                                <label class="btn btn-outline-success"
+                                       for="task1explanation2JustificationRadio1">Yes</label>
+                                <input type="radio" class="btn-check" id="task1explanation2JustificationRadio2"
+                                       autocomplete="off"
+                                       name="task1_explanation2_explanation_justifies_answer" value="weak_yes">
+                                <label class="btn btn-outline-primary" for="task1explanation2JustificationRadio2">Weak
+                                    Yes</label>
+                                <input type="radio" class="btn-check" id="task1explanation2JustificationRadio3"
+                                       autocomplete="off"
+                                       name="task1_explanation2_explanation_justifies_answer" value="weak_no">
+                                <label class="btn btn-outline-warning" for="task1explanation2JustificationRadio3">Weak
+                                    No</label>
+                                <input type="radio" class="btn-check" id="task1explanation2JustificationRadio4"
+                                       autocomplete="off"
+                                       name="task1_explanation2_explanation_justifies_answer" value="no">
+                                <label class="btn btn-outline-danger"
+                                       for="task1explanation2JustificationRadio4">No</label>
+                            </div>
+                            <div class="card-text task-divider">
+                                <p>
+                                    What are the shortcomings of Explanation #1?
+                                    <strong>Select all that apply.</strong>
+                                </p>
+                                <input type="checkbox" class="btn-check" id="task1explanation2ErrorsCheck1"
+                                       autocomplete="off"
+                                       name="task1_explanation2_shortcomings_incorrect_description" value="selected">
+                                <label class="btn btn-outline-danger" for="task1explanation2ErrorsCheck1">
+                                    Incorrect description of the image
+                                </label>
+                                <input type="checkbox" class="btn-check" id="task1explanation2ErrorsCheck2"
+                                       autocomplete="off"
+                                       name="task1_explanation2_shortcomings_insufficient_justification"
+                                       value="selected">
+                                <label class="btn btn-outline-danger" for="task1explanation2ErrorsCheck2">
+                                    Insufficient justification
+                                </label>
+                                <input type="checkbox" class="btn-check" id="task1explanation2ErrorsCheck3"
+                                       autocomplete="off"
+                                       name="task1_explanation2_shortcomings_confusing_sentence" value="selected">
+                                <label class="btn btn-outline-danger" for="task1explanation2ErrorsCheck3">
+                                    Confusing sentence
+                                </label>
+                            </div>
+                        </div>
+
+                        <h4 class="card-title task-divider">Preference</h4>
+
+                        <div class="card-text">
+                            <p class="card-text">
+                                Which explanation is better?
+                                <strong>Pick one.</strong>
+                            </p>
+                            <input type="radio" class="btn-check" id="task1preferenceRadio1"
+                                   autocomplete="off"
+                                   name="task1_preference" value="expl_1">
+                            <label class="btn btn-outline-primary"
+                                   for="task1preferenceRadio1">Explanation #1</label>
+                            <input type="radio" class="btn-check" id="task1preferenceRadio2"
+                                   autocomplete="off"
+                                   name="task1_preference" value="no_preference">
+                            <label class="btn btn-outline-primary"
+                                   for="task1preferenceRadio2">No preference</label>
+                            <input type="radio" class="btn-check" id="task1preferenceRadio3"
+                                   autocomplete="off"
+                                   name="task1_preference" value="expl_2">
+                            <label class="btn btn-outline-primary" for="task1preferenceRadio3">Explanation #2</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TASK 2 -->
+                <div class="card my-3">
+                    <div class="card-body task">
+                        <h4 class="card-title">
+                            Task 2
+                        </h4>
+                        <input type="hidden" name="task2_image_id" value="${id_1}"/>
+
+                        <h6 class="card-title task-divider">Image</h6>
+                        <div class="card-text">
+                            <img class="task-image"
+                                 src="https://d32dig5cug34uf.cloudfront.net/survey_images_vcr/${img_name_1}"
+                                 alt="Example image">
+                        </div>
+
+                        <h6 class="card-title task-divider">Question</h6>
+                        <div class="card-text">
+                            <b><u>${processed_question_1}?</u></b>
+                        </div>
+
+                        <h4 class="card-title task-divider">Questions</h4>
+
+                        <p class="card-title task-divider">
+                            What is the correct answer to the question? <strong>Pick one.</strong>
+                        </p>
+                        <div class="card-text">
+                            <div class="btn-container">
+                                <input type="radio" class="btn-check" name="task2_answer" value="answer0"
+                                       id="task2AnswerRadio1" autocomplete="off">
+                                <label class="btn btn-outline-primary"
+                                       for="task2AnswerRadio1">${answer0_1}</label>
+                            </div>
+                            <div class="btn-container">
+                                <input type="radio" class="btn-check" name="task2_answer" value="answer1"
+                                       id="task2AnswerRadio2" autocomplete="off">
+                                <label class="btn btn-outline-primary"
+                                       for="task2AnswerRadio2">${answer1_1}</label>
+                            </div>
+                            <div class="btn-container">
+                                <input type="radio" class="btn-check" name="task2_answer" value="answer2"
+                                       id="task2AnswerRadio3" autocomplete="off">
+                                <label class="btn btn-outline-primary"
+                                       for="task2AnswerRadio3">${answer2_1}</label>
+                            </div>
+                            <div class="btn-container">
+                                <input type="radio" class="btn-check" name="task2_answer" value="answer3"
+                                       id="task2AnswerRadio4" autocomplete="off">
+                                <label class="btn btn-outline-primary"
+                                       for="task2AnswerRadio4">${answer3_1}</label>
+                            </div>
+                        </div>
+
+                        <!-- Explanation 1 -->
+                        <div>
+                            <h5 class="card-title task-divider">
+                                Explanation #1: <u>${output_explanation_1}</u>
+                            </h5>
+                            <div class="card-text">
+                                <p>
+                                    Given the image and the question, does the explanation justify the answer above?
+                                    <strong>Pick one.</strong>
+                                </p>
+                                <input type="radio" class="btn-check" id="task2explanation1JustificationRadio1"
+                                       autocomplete="off"
+                                       name="task2_explanation1_explanation_justifies_answer" value="yes">
+                                <label class="btn btn-outline-success"
+                                       for="task2explanation1JustificationRadio1">Yes</label>
+                                <input type="radio" class="btn-check" id="task2explanation1JustificationRadio2"
+                                       autocomplete="off"
+                                       name="task2_explanation1_explanation_justifies_answer" value="weak_yes">
+                                <label class="btn btn-outline-primary" for="task2explanation1JustificationRadio2">Weak
+                                    Yes</label>
+                                <input type="radio" class="btn-check" id="task2explanation1JustificationRadio3"
+                                       autocomplete="off"
+                                       name="task2_explanation1_explanation_justifies_answer" value="weak_no">
+                                <label class="btn btn-outline-warning" for="task2explanation1JustificationRadio3">Weak
+                                    No</label>
+                                <input type="radio" class="btn-check" id="task2explanation1JustificationRadio4"
+                                       autocomplete="off"
+                                       name="task2_explanation1_explanation_justifies_answer" value="no">
+                                <label class="btn btn-outline-danger"
+                                       for="task2explanation1JustificationRadio4">No</label>
+                            </div>
+                            <div class="card-text task-divider">
+                                <p>
+                                    What are the shortcomings of Explanation #1?
+                                    <strong>Select all that apply.</strong>
+                                </p>
+                                <input type="checkbox" class="btn-check" id="task2explanation1ErrorsCheck1"
+                                       autocomplete="off"
+                                       name="task2_explanation1_shortcomings_incorrect_description" value="selected">
+                                <label class="btn btn-outline-danger" for="task2explanation1ErrorsCheck1">
+                                    Incorrect description of the image
+                                </label>
+                                <input type="checkbox" class="btn-check" id="task2explanation1ErrorsCheck2"
+                                       autocomplete="off"
+                                       name="task2_explanation1_shortcomings_insufficient_justification"
+                                       value="selected">
+                                <label class="btn btn-outline-danger" for="task2explanation1ErrorsCheck2">
+                                    Insufficient justification
+                                </label>
+                                <input type="checkbox" class="btn-check" id="task2explanation1ErrorsCheck3"
+                                       autocomplete="off"
+                                       name="task2_explanation1_shortcomings_confusing_sentence" value="selected">
+                                <label class="btn btn-outline-danger" for="task2explanation1ErrorsCheck3">
+                                    Confusing sentence
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Explanation 2 -->
+                        <div>
+                            <h5 class="card-title task-divider">
+                                Explanation #2: <u>${explanation_1}</u>
+                            </h5>
+                            <div class="card-text">
+                                <p>
+                                    Given the image and the question, does the explanation justify the answer above?
+                                    <strong>Pick one.</strong>
+                                </p>
+                                <input type="radio" class="btn-check" id="task2explanation2JustificationRadio1"
+                                       autocomplete="off"
+                                       name="task2_explanation2_explanation_justifies_answer" value="yes">
+                                <label class="btn btn-outline-success"
+                                       for="task2explanation2JustificationRadio1">Yes</label>
+                                <input type="radio" class="btn-check" id="task2explanation2JustificationRadio2"
+                                       autocomplete="off"
+                                       name="task2_explanation2_explanation_justifies_answer" value="weak_yes">
+                                <label class="btn btn-outline-primary" for="task2explanation2JustificationRadio2">Weak
+                                    Yes</label>
+                                <input type="radio" class="btn-check" id="task2explanation2JustificationRadio3"
+                                       autocomplete="off"
+                                       name="task2_explanation2_explanation_justifies_answer" value="weak_no">
+                                <label class="btn btn-outline-warning" for="task2explanation2JustificationRadio3">Weak
+                                    No</label>
+                                <input type="radio" class="btn-check" id="task2explanation2JustificationRadio4"
+                                       autocomplete="off"
+                                       name="task2_explanation2_explanation_justifies_answer" value="no">
+                                <label class="btn btn-outline-danger"
+                                       for="task2explanation2JustificationRadio4">No</label>
+                            </div>
+                            <div class="card-text task-divider">
+                                <p>
+                                    What are the shortcomings of Explanation #1?
+                                    <strong>Select all that apply.</strong>
+                                </p>
+                                <input type="checkbox" class="btn-check" id="task2explanation2ErrorsCheck1"
+                                       autocomplete="off"
+                                       name="task2_explanation2_shortcomings_incorrect_description" value="selected">
+                                <label class="btn btn-outline-danger" for="task2explanation2ErrorsCheck1">
+                                    Incorrect description of the image
+                                </label>
+                                <input type="checkbox" class="btn-check" id="task2explanation2ErrorsCheck2"
+                                       autocomplete="off"
+                                       name="task2_explanation2_shortcomings_insufficient_justification"
+                                       value="selected">
+                                <label class="btn btn-outline-danger" for="task2explanation2ErrorsCheck2">
+                                    Insufficient justification
+                                </label>
+                                <input type="checkbox" class="btn-check" id="task2explanation2ErrorsCheck3"
+                                       autocomplete="off"
+                                       name="task2_explanation2_shortcomings_confusing_sentence" value="selected">
+                                <label class="btn btn-outline-danger" for="task2explanation2ErrorsCheck3">
+                                    Confusing sentence
+                                </label>
+                            </div>
+                        </div>
+
+                        <h4 class="card-title task-divider">Preference</h4>
+
+                        <div class="card-text">
+                            <p class="card-text">
+                                Which explanation is better?
+                                <strong>Pick one.</strong>
+                            </p>
+                            <input type="radio" class="btn-check" id="task2preferenceRadio1"
+                                   autocomplete="off"
+                                   name="task2_preference" value="expl_1">
+                            <label class="btn btn-outline-primary"
+                                   for="task2preferenceRadio1">Explanation #1</label>
+                            <input type="radio" class="btn-check" id="task2preferenceRadio2"
+                                   autocomplete="off"
+                                   name="task2_preference" value="no_preference">
+                            <label class="btn btn-outline-primary"
+                                   for="task2preferenceRadio2">No preference</label>
+                            <input type="radio" class="btn-check" id="task2preferenceRadio3"
+                                   autocomplete="off"
+                                   name="task2_preference" value="expl_2">
+                            <label class="btn btn-outline-primary" for="task2preferenceRadio3">Explanation #2</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TASK 3 -->
+                <div class="card my-3">
+                    <div class="card-body task">
+                        <h4 class="card-title">
+                            Task 3
+                        </h4>
+                        <input type="hidden" name="task3_image_id" value="${id_2}"/>
+
+                        <h6 class="card-title task-divider">Image</h6>
+                        <div class="card-text">
+                            <img class="task-image"
+                                 src="https://d32dig5cug34uf.cloudfront.net/survey_images_vcr/${img_name_2}"
+                                 alt="Example image">
+                        </div>
+
+                        <h6 class="card-title task-divider">Question</h6>
+                        <div class="card-text">
+                            <b><u>${processed_question_2}?</u></b>
+                        </div>
+
+                        <h4 class="card-title task-divider">Questions</h4>
+
+                        <p class="card-title task-divider">
+                            What is the correct answer to the question? <strong>Pick one.</strong>
+                        </p>
+                        <div class="card-text">
+                            <div class="btn-container">
+                                <input type="radio" class="btn-check" name="task3_answer" value="answer0"
+                                       id="task3AnswerRadio1" autocomplete="off">
+                                <label class="btn btn-outline-primary"
+                                       for="task3AnswerRadio1">${answer0_2}</label>
+                            </div>
+                            <div class="btn-container">
+                                <input type="radio" class="btn-check" name="task3_answer" value="answer1"
+                                       id="task3AnswerRadio2" autocomplete="off">
+                                <label class="btn btn-outline-primary"
+                                       for="task3AnswerRadio2">${answer1_2}</label>
+                            </div>
+                            <div class="btn-container">
+                                <input type="radio" class="btn-check" name="task3_answer" value="answer2"
+                                       id="task3AnswerRadio3" autocomplete="off">
+                                <label class="btn btn-outline-primary"
+                                       for="task3AnswerRadio3">${answer2_2}</label>
+                            </div>
+                            <div class="btn-container">
+                                <input type="radio" class="btn-check" name="task3_answer" value="answer3"
+                                       id="task3AnswerRadio4" autocomplete="off">
+                                <label class="btn btn-outline-primary"
+                                       for="task3AnswerRadio4">${answer3_2}</label>
+                            </div>
+                        </div>
+
+                        <!-- Explanation 1 -->
+                        <div>
+                            <h5 class="card-title task-divider">
+                                Explanation #1: <u>${output_explanation_2}</u>
+                            </h5>
+                            <div class="card-text">
+                                <p>
+                                    Given the image and the question, does the explanation justify the answer above?
+                                    <strong>Pick one.</strong>
+                                </p>
+                                <input type="radio" class="btn-check" id="task3explanation1JustificationRadio1"
+                                       autocomplete="off"
+                                       name="task3_explanation1_explanation_justifies_answer" value="yes">
+                                <label class="btn btn-outline-success"
+                                       for="task3explanation1JustificationRadio1">Yes</label>
+                                <input type="radio" class="btn-check" id="task3explanation1JustificationRadio2"
+                                       autocomplete="off"
+                                       name="task3_explanation1_explanation_justifies_answer" value="weak_yes">
+                                <label class="btn btn-outline-primary" for="task3explanation1JustificationRadio2">Weak
+                                    Yes</label>
+                                <input type="radio" class="btn-check" id="task3explanation1JustificationRadio3"
+                                       autocomplete="off"
+                                       name="task3_explanation1_explanation_justifies_answer" value="weak_no">
+                                <label class="btn btn-outline-warning" for="task3explanation1JustificationRadio3">Weak
+                                    No</label>
+                                <input type="radio" class="btn-check" id="task3explanation1JustificationRadio4"
+                                       autocomplete="off"
+                                       name="task3_explanation1_explanation_justifies_answer" value="no">
+                                <label class="btn btn-outline-danger"
+                                       for="task3explanation1JustificationRadio4">No</label>
+                            </div>
+                            <div class="card-text task-divider">
+                                <p>
+                                    What are the shortcomings of Explanation #1?
+                                    <strong>Select all that apply.</strong>
+                                </p>
+                                <input type="checkbox" class="btn-check" id="task3explanation1ErrorsCheck1"
+                                       autocomplete="off"
+                                       name="task3_explanation1_shortcomings_incorrect_description" value="selected">
+                                <label class="btn btn-outline-danger" for="task3explanation1ErrorsCheck1">
+                                    Incorrect description of the image
+                                </label>
+                                <input type="checkbox" class="btn-check" id="task3explanation1ErrorsCheck2"
+                                       autocomplete="off"
+                                       name="task3_explanation1_shortcomings_insufficient_justification"
+                                       value="selected">
+                                <label class="btn btn-outline-danger" for="task3explanation1ErrorsCheck2">
+                                    Insufficient justification
+                                </label>
+                                <input type="checkbox" class="btn-check" id="task3explanation1ErrorsCheck3"
+                                       autocomplete="off"
+                                       name="task3_explanation1_shortcomings_confusing_sentence" value="selected">
+                                <label class="btn btn-outline-danger" for="task3explanation1ErrorsCheck3">
+                                    Confusing sentence
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Explanation 2 -->
+                        <div>
+                            <h5 class="card-title task-divider">
+                                Explanation #2: <u>${explanation_2}</u>
+                            </h5>
+                            <div class="card-text">
+                                <p>
+                                    Given the image and the question, does the explanation justify the answer above?
+                                    <strong>Pick one.</strong>
+                                </p>
+                                <input type="radio" class="btn-check" id="task3explanation2JustificationRadio1"
+                                       autocomplete="off"
+                                       name="task3_explanation2_explanation_justifies_answer" value="yes">
+                                <label class="btn btn-outline-success"
+                                       for="task3explanation2JustificationRadio1">Yes</label>
+                                <input type="radio" class="btn-check" id="task3explanation2JustificationRadio2"
+                                       autocomplete="off"
+                                       name="task3_explanation2_explanation_justifies_answer" value="weak_yes">
+                                <label class="btn btn-outline-primary" for="task3explanation2JustificationRadio2">Weak
+                                    Yes</label>
+                                <input type="radio" class="btn-check" id="task3explanation2JustificationRadio3"
+                                       autocomplete="off"
+                                       name="task3_explanation2_explanation_justifies_answer" value="weak_no">
+                                <label class="btn btn-outline-warning" for="task3explanation2JustificationRadio3">Weak
+                                    No</label>
+                                <input type="radio" class="btn-check" id="task3explanation2JustificationRadio4"
+                                       autocomplete="off"
+                                       name="task3_explanation2_explanation_justifies_answer" value="no">
+                                <label class="btn btn-outline-danger"
+                                       for="task3explanation2JustificationRadio4">No</label>
+                            </div>
+                            <div class="card-text task-divider">
+                                <p>
+                                    What are the shortcomings of Explanation #1?
+                                    <strong>Select all that apply.</strong>
+                                </p>
+                                <input type="checkbox" class="btn-check" id="task3explanation2ErrorsCheck1"
+                                       autocomplete="off"
+                                       name="task3_explanation2_shortcomings_incorrect_description" value="selected">
+                                <label class="btn btn-outline-danger" for="task3explanation2ErrorsCheck1">
+                                    Incorrect description of the image
+                                </label>
+                                <input type="checkbox" class="btn-check" id="task3explanation2ErrorsCheck2"
+                                       autocomplete="off"
+                                       name="task3_explanation2_shortcomings_insufficient_justification"
+                                       value="selected">
+                                <label class="btn btn-outline-danger" for="task3explanation2ErrorsCheck2">
+                                    Insufficient justification
+                                </label>
+                                <input type="checkbox" class="btn-check" id="task3explanation2ErrorsCheck3"
+                                       autocomplete="off"
+                                       name="task3_explanation2_shortcomings_confusing_sentence" value="selected">
+                                <label class="btn btn-outline-danger" for="task3explanation2ErrorsCheck3">
+                                    Confusing sentence
+                                </label>
+                            </div>
+                        </div>
+
+                        <h4 class="card-title task-divider">Preference</h4>
+
+                        <div class="card-text">
+                            <p class="card-text">
+                                Which explanation is better?
+                                <strong>Pick one.</strong>
+                            </p>
+                            <input type="radio" class="btn-check" id="task3preferenceRadio1"
+                                   autocomplete="off"
+                                   name="task3_preference" value="expl_1">
+                            <label class="btn btn-outline-primary"
+                                   for="task3preferenceRadio1">Explanation #1</label>
+                            <input type="radio" class="btn-check" id="task3preferenceRadio2"
+                                   autocomplete="off"
+                                   name="task3_preference" value="no_preference">
+                            <label class="btn btn-outline-primary"
+                                   for="task3preferenceRadio2">No preference</label>
+                            <input type="radio" class="btn-check" id="task3preferenceRadio3"
+                                   autocomplete="off"
+                                   name="task3_preference" value="expl_2">
+                            <label class="btn btn-outline-primary" for="task3preferenceRadio3">Explanation #2</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TASK 4 -->
+                <div class="card my-3">
+                    <div class="card-body task">
+                        <h4 class="card-title">
+                            Task 4
+                        </h4>
+                        <input type="hidden" name="task4_image_id" value="${id_3}"/>
+
+                        <h6 class="card-title task-divider">Image</h6>
+                        <div class="card-text">
+                            <img class="task-image"
+                                 src="https://d32dig5cug34uf.cloudfront.net/survey_images_vcr/${img_name_3}"
+                                 alt="Example image">
+                        </div>
+
+                        <h6 class="card-title task-divider">Question</h6>
+                        <div class="card-text">
+                            <b><u>${processed_question_3}?</u></b>
+                        </div>
+
+                        <h4 class="card-title task-divider">Questions</h4>
+
+                        <p class="card-title task-divider">
+                            What is the correct answer to the question? <strong>Pick one.</strong>
+                        </p>
+                        <div class="card-text">
+                            <div class="btn-container">
+                                <input type="radio" class="btn-check" name="task4_answer" value="answer0"
+                                       id="task4AnswerRadio1" autocomplete="off">
+                                <label class="btn btn-outline-primary"
+                                       for="task4AnswerRadio1">${answer0_3}</label>
+                            </div>
+                            <div class="btn-container">
+                                <input type="radio" class="btn-check" name="task4_answer" value="answer1"
+                                       id="task4AnswerRadio2" autocomplete="off">
+                                <label class="btn btn-outline-primary"
+                                       for="task4AnswerRadio2">${answer1_3}</label>
+                            </div>
+                            <div class="btn-container">
+                                <input type="radio" class="btn-check" name="task4_answer" value="answer2"
+                                       id="task4AnswerRadio3" autocomplete="off">
+                                <label class="btn btn-outline-primary"
+                                       for="task4AnswerRadio3">${answer2_3}</label>
+                            </div>
+                            <div class="btn-container">
+                                <input type="radio" class="btn-check" name="task4_answer" value="answer3"
+                                       id="task4AnswerRadio4" autocomplete="off">
+                                <label class="btn btn-outline-primary"
+                                       for="task4AnswerRadio4">${answer3_3}</label>
+                            </div>
+                        </div>
+
+                        <!-- Explanation 1 -->
+                        <div>
+                            <h5 class="card-title task-divider">
+                                Explanation #1: <u>${output_explanation_3}</u>
+                            </h5>
+                            <div class="card-text">
+                                <p>
+                                    Given the image and the question, does the explanation justify the answer above?
+                                    <strong>Pick one.</strong>
+                                </p>
+                                <input type="radio" class="btn-check" id="task4explanation1JustificationRadio1"
+                                       autocomplete="off"
+                                       name="task4_explanation1_explanation_justifies_answer" value="yes">
+                                <label class="btn btn-outline-success"
+                                       for="task4explanation1JustificationRadio1">Yes</label>
+                                <input type="radio" class="btn-check" id="task4explanation1JustificationRadio2"
+                                       autocomplete="off"
+                                       name="task4_explanation1_explanation_justifies_answer" value="weak_yes">
+                                <label class="btn btn-outline-primary" for="task4explanation1JustificationRadio2">Weak
+                                    Yes</label>
+                                <input type="radio" class="btn-check" id="task4explanation1JustificationRadio3"
+                                       autocomplete="off"
+                                       name="task4_explanation1_explanation_justifies_answer" value="weak_no">
+                                <label class="btn btn-outline-warning" for="task4explanation1JustificationRadio3">Weak
+                                    No</label>
+                                <input type="radio" class="btn-check" id="task4explanation1JustificationRadio4"
+                                       autocomplete="off"
+                                       name="task4_explanation1_explanation_justifies_answer" value="no">
+                                <label class="btn btn-outline-danger"
+                                       for="task4explanation1JustificationRadio4">No</label>
+                            </div>
+                            <div class="card-text task-divider">
+                                <p>
+                                    What are the shortcomings of Explanation #1?
+                                    <strong>Select all that apply.</strong>
+                                </p>
+                                <input type="checkbox" class="btn-check" id="task4explanation1ErrorsCheck1"
+                                       autocomplete="off"
+                                       name="task4_explanation1_shortcomings_incorrect_description" value="selected">
+                                <label class="btn btn-outline-danger" for="task4explanation1ErrorsCheck1">
+                                    Incorrect description of the image
+                                </label>
+                                <input type="checkbox" class="btn-check" id="task4explanation1ErrorsCheck2"
+                                       autocomplete="off"
+                                       name="task4_explanation1_shortcomings_insufficient_justification"
+                                       value="selected">
+                                <label class="btn btn-outline-danger" for="task4explanation1ErrorsCheck2">
+                                    Insufficient justification
+                                </label>
+                                <input type="checkbox" class="btn-check" id="task4explanation1ErrorsCheck3"
+                                       autocomplete="off"
+                                       name="task4_explanation1_shortcomings_confusing_sentence" value="selected">
+                                <label class="btn btn-outline-danger" for="task4explanation1ErrorsCheck3">
+                                    Confusing sentence
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Explanation 2 -->
+                        <div>
+                            <h5 class="card-title task-divider">
+                                Explanation #2: <u>${explanation_3}</u>
+                            </h5>
+                            <div class="card-text">
+                                <p>
+                                    Given the image and the question, does the explanation justify the answer above?
+                                    <strong>Pick one.</strong>
+                                </p>
+                                <input type="radio" class="btn-check" id="task4explanation2JustificationRadio1"
+                                       autocomplete="off"
+                                       name="task4_explanation2_explanation_justifies_answer" value="yes">
+                                <label class="btn btn-outline-success"
+                                       for="task4explanation2JustificationRadio1">Yes</label>
+                                <input type="radio" class="btn-check" id="task4explanation2JustificationRadio2"
+                                       autocomplete="off"
+                                       name="task4_explanation2_explanation_justifies_answer" value="weak_yes">
+                                <label class="btn btn-outline-primary" for="task4explanation2JustificationRadio2">Weak
+                                    Yes</label>
+                                <input type="radio" class="btn-check" id="task4explanation2JustificationRadio3"
+                                       autocomplete="off"
+                                       name="task4_explanation2_explanation_justifies_answer" value="weak_no">
+                                <label class="btn btn-outline-warning" for="task4explanation2JustificationRadio3">Weak
+                                    No</label>
+                                <input type="radio" class="btn-check" id="task4explanation2JustificationRadio4"
+                                       autocomplete="off"
+                                       name="task4_explanation2_explanation_justifies_answer" value="no">
+                                <label class="btn btn-outline-danger"
+                                       for="task4explanation2JustificationRadio4">No</label>
+                            </div>
+                            <div class="card-text task-divider">
+                                <p>
+                                    What are the shortcomings of Explanation #1?
+                                    <strong>Select all that apply.</strong>
+                                </p>
+                                <input type="checkbox" class="btn-check" id="task4explanation2ErrorsCheck1"
+                                       autocomplete="off"
+                                       name="task4_explanation2_shortcomings_incorrect_description" value="selected">
+                                <label class="btn btn-outline-danger" for="task4explanation2ErrorsCheck1">
+                                    Incorrect description of the image
+                                </label>
+                                <input type="checkbox" class="btn-check" id="task4explanation2ErrorsCheck2"
+                                       autocomplete="off"
+                                       name="task4_explanation2_shortcomings_insufficient_justification"
+                                       value="selected">
+                                <label class="btn btn-outline-danger" for="task4explanation2ErrorsCheck2">
+                                    Insufficient justification
+                                </label>
+                                <input type="checkbox" class="btn-check" id="task4explanation2ErrorsCheck3"
+                                       autocomplete="off"
+                                       name="task4_explanation2_shortcomings_confusing_sentence" value="selected">
+                                <label class="btn btn-outline-danger" for="task4explanation2ErrorsCheck3">
+                                    Confusing sentence
+                                </label>
+                            </div>
+                        </div>
+
+                        <h4 class="card-title task-divider">Preference</h4>
+
+                        <div class="card-text">
+                            <p class="card-text">
+                                Which explanation is better?
+                                <strong>Pick one.</strong>
+                            </p>
+                            <input type="radio" class="btn-check" id="task4preferenceRadio1"
+                                   autocomplete="off"
+                                   name="task4_preference" value="expl_1">
+                            <label class="btn btn-outline-primary"
+                                   for="task4preferenceRadio1">Explanation #1</label>
+                            <input type="radio" class="btn-check" id="task4preferenceRadio2"
+                                   autocomplete="off"
+                                   name="task4_preference" value="no_preference">
+                            <label class="btn btn-outline-primary"
+                                   for="task4preferenceRadio2">No preference</label>
+                            <input type="radio" class="btn-check" id="task4preferenceRadio3"
+                                   autocomplete="off"
+                                   name="task4_preference" value="expl_2">
+                            <label class="btn btn-outline-primary" for="task4preferenceRadio3">Explanation #2</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TASK 5 -->
+                <div class="card my-3">
+                    <div class="card-body task">
+                        <h4 class="card-title">
+                            Task 5
+                        </h4>
+                        <input type="hidden" name="task5_image_id" value="${id_4}"/>
+
+                        <h6 class="card-title task-divider">Image</h6>
+                        <div class="card-text">
+                            <img class="task-image"
+                                 src="https://d32dig5cug34uf.cloudfront.net/survey_images_vcr/${img_name_4}"
+                                 alt="Example image">
+                        </div>
+
+                        <h6 class="card-title task-divider">Question</h6>
+                        <div class="card-text">
+                            <b><u>${processed_question_4}?</u></b>
+                        </div>
+
+                        <h4 class="card-title task-divider">Questions</h4>
+
+                        <p class="card-title task-divider">
+                            What is the correct answer to the question? <strong>Pick one.</strong>
+                        </p>
+                        <div class="card-text">
+                            <div class="btn-container">
+                                <input type="radio" class="btn-check" name="task5_answer" value="answer0"
+                                       id="task5AnswerRadio1" autocomplete="off">
+                                <label class="btn btn-outline-primary"
+                                       for="task5AnswerRadio1">${answer0_4}</label>
+                            </div>
+                            <div class="btn-container">
+                                <input type="radio" class="btn-check" name="task5_answer" value="answer1"
+                                       id="task5AnswerRadio2" autocomplete="off">
+                                <label class="btn btn-outline-primary"
+                                       for="task5AnswerRadio2">${answer1_4}</label>
+                            </div>
+                            <div class="btn-container">
+                                <input type="radio" class="btn-check" name="task5_answer" value="answer2"
+                                       id="task5AnswerRadio3" autocomplete="off">
+                                <label class="btn btn-outline-primary"
+                                       for="task5AnswerRadio3">${answer2_4}</label>
+                            </div>
+                            <div class="btn-container">
+                                <input type="radio" class="btn-check" name="task5_answer" value="answer3"
+                                       id="task5AnswerRadio4" autocomplete="off">
+                                <label class="btn btn-outline-primary"
+                                       for="task5AnswerRadio4">${answer3_4}</label>
+                            </div>
+                        </div>
+
+                        <!-- Explanation 1 -->
+                        <div>
+                            <h5 class="card-title task-divider">
+                                Explanation #1: <u>${output_explanation_4}</u>
+                            </h5>
+                            <div class="card-text">
+                                <p>
+                                    Given the image and the question, does the explanation justify the answer above?
+                                    <strong>Pick one.</strong>
+                                </p>
+                                <input type="radio" class="btn-check" id="task5explanation1JustificationRadio1"
+                                       autocomplete="off"
+                                       name="task5_explanation1_explanation_justifies_answer" value="yes">
+                                <label class="btn btn-outline-success"
+                                       for="task5explanation1JustificationRadio1">Yes</label>
+                                <input type="radio" class="btn-check" id="task5explanation1JustificationRadio2"
+                                       autocomplete="off"
+                                       name="task5_explanation1_explanation_justifies_answer" value="weak_yes">
+                                <label class="btn btn-outline-primary" for="task5explanation1JustificationRadio2">Weak
+                                    Yes</label>
+                                <input type="radio" class="btn-check" id="task5explanation1JustificationRadio3"
+                                       autocomplete="off"
+                                       name="task5_explanation1_explanation_justifies_answer" value="weak_no">
+                                <label class="btn btn-outline-warning" for="task5explanation1JustificationRadio3">Weak
+                                    No</label>
+                                <input type="radio" class="btn-check" id="task5explanation1JustificationRadio4"
+                                       autocomplete="off"
+                                       name="task5_explanation1_explanation_justifies_answer" value="no">
+                                <label class="btn btn-outline-danger"
+                                       for="task5explanation1JustificationRadio4">No</label>
+                            </div>
+                            <div class="card-text task-divider">
+                                <p>
+                                    What are the shortcomings of Explanation #1?
+                                    <strong>Select all that apply.</strong>
+                                </p>
+                                <input type="checkbox" class="btn-check" id="task5explanation1ErrorsCheck1"
+                                       autocomplete="off"
+                                       name="task5_explanation1_shortcomings_incorrect_description" value="selected">
+                                <label class="btn btn-outline-danger" for="task5explanation1ErrorsCheck1">
+                                    Incorrect description of the image
+                                </label>
+                                <input type="checkbox" class="btn-check" id="task5explanation1ErrorsCheck2"
+                                       autocomplete="off"
+                                       name="task5_explanation1_shortcomings_insufficient_justification"
+                                       value="selected">
+                                <label class="btn btn-outline-danger" for="task5explanation1ErrorsCheck2">
+                                    Insufficient justification
+                                </label>
+                                <input type="checkbox" class="btn-check" id="task5explanation1ErrorsCheck3"
+                                       autocomplete="off"
+                                       name="task5_explanation1_shortcomings_confusing_sentence" value="selected">
+                                <label class="btn btn-outline-danger" for="task5explanation1ErrorsCheck3">
+                                    Confusing sentence
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Explanation 2 -->
+                        <div>
+                            <h5 class="card-title task-divider">
+                                Explanation #2: <u>${explanation_4}</u>
+                            </h5>
+                            <div class="card-text">
+                                <p>
+                                    Given the image and the question, does the explanation justify the answer above?
+                                    <strong>Pick one.</strong>
+                                </p>
+                                <input type="radio" class="btn-check" id="task5explanation2JustificationRadio1"
+                                       autocomplete="off"
+                                       name="task5_explanation2_explanation_justifies_answer" value="yes">
+                                <label class="btn btn-outline-success"
+                                       for="task5explanation2JustificationRadio1">Yes</label>
+                                <input type="radio" class="btn-check" id="task5explanation2JustificationRadio2"
+                                       autocomplete="off"
+                                       name="task5_explanation2_explanation_justifies_answer" value="weak_yes">
+                                <label class="btn btn-outline-primary" for="task5explanation2JustificationRadio2">Weak
+                                    Yes</label>
+                                <input type="radio" class="btn-check" id="task5explanation2JustificationRadio3"
+                                       autocomplete="off"
+                                       name="task5_explanation2_explanation_justifies_answer" value="weak_no">
+                                <label class="btn btn-outline-warning" for="task5explanation2JustificationRadio3">Weak
+                                    No</label>
+                                <input type="radio" class="btn-check" id="task5explanation2JustificationRadio4"
+                                       autocomplete="off"
+                                       name="task5_explanation2_explanation_justifies_answer" value="no">
+                                <label class="btn btn-outline-danger"
+                                       for="task5explanation2JustificationRadio4">No</label>
+                            </div>
+                            <div class="card-text task-divider">
+                                <p>
+                                    What are the shortcomings of Explanation #1?
+                                    <strong>Select all that apply.</strong>
+                                </p>
+                                <input type="checkbox" class="btn-check" id="task5explanation2ErrorsCheck1"
+                                       autocomplete="off"
+                                       name="task5_explanation2_shortcomings_incorrect_description" value="selected">
+                                <label class="btn btn-outline-danger" for="task5explanation2ErrorsCheck1">
+                                    Incorrect description of the image
+                                </label>
+                                <input type="checkbox" class="btn-check" id="task5explanation2ErrorsCheck2"
+                                       autocomplete="off"
+                                       name="task5_explanation2_shortcomings_insufficient_justification"
+                                       value="selected">
+                                <label class="btn btn-outline-danger" for="task5explanation2ErrorsCheck2">
+                                    Insufficient justification
+                                </label>
+                                <input type="checkbox" class="btn-check" id="task5explanation2ErrorsCheck3"
+                                       autocomplete="off"
+                                       name="task5_explanation2_shortcomings_confusing_sentence" value="selected">
+                                <label class="btn btn-outline-danger" for="task5explanation2ErrorsCheck3">
+                                    Confusing sentence
+                                </label>
+                            </div>
+                        </div>
+
+                        <h4 class="card-title task-divider">Preference</h4>
+
+                        <div class="card-text">
+                            <p class="card-text">
+                                Which explanation is better?
+                                <strong>Pick one.</strong>
+                            </p>
+                            <input type="radio" class="btn-check" id="task5preferenceRadio1"
+                                   autocomplete="off"
+                                   name="task5_preference" value="expl_1">
+                            <label class="btn btn-outline-primary"
+                                   for="task5preferenceRadio1">Explanation #1</label>
+                            <input type="radio" class="btn-check" id="task5preferenceRadio2"
+                                   autocomplete="off"
+                                   name="task5_preference" value="no_preference">
+                            <label class="btn btn-outline-primary"
+                                   for="task5preferenceRadio2">No preference</label>
+                            <input type="radio" class="btn-check " id="task5preferenceRadio3"
+                                   autocomplete="off"
+                                   name="task5_preference" value="expl_2">
+                            <label class="btn btn-outline-primary" for="task5preferenceRadio3">Explanation #2</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-floating my-3">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="feedbackTextarea"
+                              style="height: 100px" name="feedback"></textarea>
+                    <label for="feedbackTextarea">Optional feedback about this HIT</label>
+                </div>
+            </crowd-form>
+        </div>
+    </div>
+</section>
+
+<style>
+    form {
+        height: auto !important;
+        padding-bottom: 20px;
+    }
+
+    #survey-root .btn.btn-sm.collapser {
+        --bs-btn-padding-y: .25rem;
+        --bs-btn-padding-x: .5rem;
+        --bs-btn-font-size: .7rem;
+        margin-top: -3px;
+        margin-left: 10px;
+    }
+
+    #survey-root .task img.task-image {
+        max-width: max(100%, 750px);
+        max-height: 600px;
+    }
+
+    #survey-root .task .task-divider {
+        margin-top: 2rem;
+        margin-bottom: 10px;
+    }
+
+    #survey-root .task h5.task-divider {
+        margin-top: 3rem;
+    }
+
+    #survey-root .task .btn-container {
+        margin: .2rem 0;
+    }
+
+    #survey-root .task .explanation {
+        color: #333;
+        font-size: .8rem;
+    }
+</style>
+
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
