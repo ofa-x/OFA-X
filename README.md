@@ -34,3 +34,17 @@ If you are using OFA-X in your work, please consider citing:
   organization={PMLR}
 }
 ```
+
+## Model Weights
+
+Please see the links in the table to download the trained model weights. The base-size model is only available with OFA-pretraining, while we selected the huge-size model depending on BERTScore performance of the Large model.
+
+| Training               | Pretraining | Model Weights                                                                                                                                                                                                                                                                                |
+|------------------------|-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| VQA-X                  | OFA         | [Base](https://drive.google.com/file/d/1Sw1I_4L0cZbaglZ4ZotsqB8tRSJ_-hqB/view?usp=sharing), [Large](https://drive.google.com/file/d/1g1CascIuRhTVFzPd2kE1DhNfnf3j7hZf/view?usp=share_link)                                                                                                   |
+| VQA-X                  | Caption     | [Large](https://drive.google.com/file/d/1MP-QWl9rTUC4xk8VZ8DdXLkPoEta83B-/view?usp=share_link), [Huge](https://drive.google.com/file/d/19iJ-722TBfo7NZvRunBK4MDD3dVxIkeC/view?usp=share_link)                                                                                                |
+| e-SNLI-VE              | OFA         | [Base](https://drive.google.com/file/d/1Kf-qJ3pVHSgkUFSjlwZwBc8XBQMn_WKN/view?usp=share_link), [Large](https://drive.google.com/file/d/1WUu88G5Bm94Yyx--Tkoq2lo_qBD0T9uW/view?usp=share_link), [Huge](https://drive.google.com/file/d/13H4NUoNfcrfo85STjdfxY2S2t7oE8Z7o/view?usp=share_link) |
+| e-SNLI-VE              | Caption     | [Large](https://drive.google.com/file/d/1WHkDREL0jpMnyHtxOcrfw0q97x-2kSeX/view?usp=share_link)                                                                                                                                                                                               |
+| VCR                    | OFA         | [Base](https://drive.google.com/file/d/1iApz-0mj_i4I3senPxUIPfsZvUqZWA_6/view?usp=share_link), [Large](https://drive.google.com/file/d/19CaqUcLWmEkKxb2bZMV0oqMRhrBK0QdJ/view?usp=share_link), [Huge](https://drive.google.com/file/d/133Dl851hXN2F2z1m3_RhEOeJmCiUJI4Q/view?usp=share_link) |
+| VCR                    | Caption     | [Large](https://drive.google.com/file/d/1P4IrLOYEcp35WfG3NhV0Q6td4PLLYpqA/view?usp=share_link)                                                                                                                                                                                               |
+| OFA-X_MT (e-ViL-comb.) | OFA         | [Large](https://drive.google.com/file/d/1lpuxBSdzTgn3cKP-Qsk_GqL8j0Mar4jW/view?usp=share_link)                                                                                                                                                                                               |
