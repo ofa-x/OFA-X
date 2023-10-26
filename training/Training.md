@@ -9,7 +9,7 @@ cd OFA
 pip install -r requirements.txt
 cd ..
 ```
-4. Download the checkpoint for fine-tuning (see [OFA README](./OFA/checkpoints.md) for options)
+4. Download the checkpoint for fine-tuning (see [OFA README](/OFA/checkpoints.md) for options)
 5. Run the training script for the desired task
 ```
 cd training
