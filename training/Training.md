@@ -1,7 +1,7 @@
 # How to run experiments with OFA-X
 
 1. Start your development server, navigate to your desired working directory and download this repository
-2. Prepare datasets according to the [dataset preparation README](./dataset_preparation/Datasets.md)
+2. Prepare datasets according to the [dataset preparation README](/dataset_preparation/Datasets.md)
 3. Install the requirements
 ```
 # [optional] create a virtual environment: conda create -n ofa-x python=3.10 -y && conda activate ofa-x
